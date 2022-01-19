@@ -1,0 +1,25 @@
+namespace PracticeAssignmentsBLabz.Day5PractProb
+{
+    public class Utility
+    {
+        public static void Power2()
+        {
+            Utility u = new Utility();
+            Console.WriteLine("Enter a number:");
+            int num = u.inputInteger();
+            Console.WriteLine("Power of 2^" + num + " is: " + (Math.Pow(2, num)));
+            Console.WriteLine();
+            Console.WriteLine("Printing all till Power Value " + num);
+
+            for (int i = 1; i <= num; i++)
+            {
+                Console.WriteLine("Power of 2^" + i + " is: " + (Math.Pow(2, i)));
+            }
+        }
+
+        public int inputInteger()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}   

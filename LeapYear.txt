@@ -1,0 +1,18 @@
+namespace PracticeAssignmentsBLabz.Day5PractProb
+{
+    public class Day5
+    {
+        public static void LeapYear()
+        {
+            Console.WriteLine("Enter Year");
+            int yearInput = Int32.Parse(Console.ReadLine());
+            if (yearInput % 4 == 0 && yearInput % 100 != 0 || yearInput % 400 == 0)
+            {
+                Console.WriteLine("Enter year is LeapYear");
+            }
+            else
+            {
+                Console.WriteLine("Not a Leap Year");
+            }
+        }
+    }
