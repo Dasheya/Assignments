@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PractPro
+{
+
+    class EmpWageSwitchCase
+    {
+        public const int Parttime = 1;
+        public const int Fulltime = 2;
+        public const int PerHour = 20;
+        public const int Workingdays = 20;
+        public static void Attendance()
+        {
+            int IS_FULL_TIME = 1;
+            Random random = new Random();
+            int empCheck = random.Next(0, 2);
+            if (empCheck == IS_FULL_TIME)
+                Console.WriteLine("Employee is present");
+            else
+                Console.WriteLine("Employee is absent");
+        }
+        public static void CalculateWages()
+        {
+            int empHrs = 0;
+            int empWage = 0;
+            int totalEmpWage = 0;
+            for (int day = 0; day < Workingdays; day++)
+            {
+
+                Random random = new Random();
+                int empCheck = random.Next(0, 3);
+                switch (empCheck)
+                {
+                    case Parttime:
+                        empHrs = 4;
+                        break;
+                    case Fulltime:
+                        empHrs = 8;
+                        break;
+                    default:
+                        empHrs = 0;
+                        break;
+                }
+                empWage = empHrs * PerHour;
+                totalEmpWage += empWage;
+                Console.WriteLine("Emp Wage: " + empWage);
+            }
+            Console.WriteLine("Total Emp Wage: " + totalEmpWage);
+        }
+    }
+}
