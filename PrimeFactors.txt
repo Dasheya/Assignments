@@ -1,0 +1,35 @@
+namespace PracticeAssignmentsBLabz.Day5PractProb
+{
+    public class PrimeFactors
+    {
+        public static Boolean isPrime(int i)
+        {
+            for (int j = 2; j < i; j++)
+            {
+                if (i % j == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static void PrimeFact()
+        {
+            Utility u = new Utility();
+            Console.WriteLine("Enter the no. to find PrimeFactors:");
+            int n = u.inputInteger();
+            Console.WriteLine();
+            Console.WriteLine("The prime factors for the " + n + " is:");
+            Console.WriteLine();
+
+            for (int i = 2; i <= n; i++)
+            {
+                if (isPrime(i))
+                {
+                    Console.WriteLine(i + " ");
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+}

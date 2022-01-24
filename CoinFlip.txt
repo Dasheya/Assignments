@@ -1,0 +1,29 @@
+namespace HelloWorld.Day5PrctPrb
+{
+    class Program
+
+    {
+        private static int Coinflip()
+        {
+
+            Random Toss = new Random();
+            int heads = 0;
+            int tails = 0;
+            int result = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                result = Toss.Next(0, 2);
+                if (result == 1)
+                {
+                    heads++;
+                }
+                else
+                {
+                    tails++;
+                }
+            }
+            Console.WriteLine("heads was flipped {0} times", heads);
+            Console.WriteLine("tails was flipped {0} times", tails);
+            return result;
+        }
+    }
