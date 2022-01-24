@@ -1,0 +1,21 @@
+namespace PracticeAssignmentsBLabz.Day6LogicalProb
+{
+    internal class ReverseANumber
+    {
+        public static void ReverseN()
+        {
+            Console.WriteLine("Enter Number to Get Reverse Number");
+            int inputNum= Int32.Parse(Console.ReadLine());
+            int remainder, reverse = 0;
+
+            while (inputNum>0)
+            {
+                remainder = inputNum % 10;
+                reverse = reverse * 10 + remainder;
+                inputNum = inputNum / 10;
+
+            }
+            Console.WriteLine("Reverse Number - "+reverse);
+        }
+    }
+}
