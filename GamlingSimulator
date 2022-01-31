@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GamlingSimulator
+{
+    internal class Stake100everyday1everygame
+    {
+        public static void Gambler()
+        {
+            int stake = 100;
+            int betpergame = 1;
+            
+        }
+    }
+}
