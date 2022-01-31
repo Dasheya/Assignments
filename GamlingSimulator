@@ -14,5 +14,20 @@ namespace GamlingSimulator
             int betpergame = 1;
             
         }
+         public static void WinLose()
+        {
+            Random makebet = new Random();
+            int stake = makebet.Next(0, 2);
+            int betpergame = 1;
+            if (stake == betpergame)
+            {
+                Console.WriteLine("Win");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("lose");
+                Console.ReadLine();
+            }
     }
 }
